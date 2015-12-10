@@ -1,0 +1,8 @@
+DaoType=S2JDBC
+DefaultResourcePath=/teamShuffle/src/main/resources
+DefaultRootPackage=com.teamShuffle
+DefaultSrcPath=/teamShuffle/src/main/java
+ServletPath=/teamShuffle
+ViewType=SA-Struts
+WebContentsRoot=src/main/webapp/
+eclipse.preferences.version=1
