@@ -21,4 +21,5 @@ public class IndexAction {
 		completeDto.inputName = completeForm.inputNameData;
 	    return "complete.jsp";
 	}
+
 }
