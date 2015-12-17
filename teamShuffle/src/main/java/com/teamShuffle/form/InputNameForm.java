@@ -1,7 +1,7 @@
 package com.teamShuffle.form;
 
 public class InputNameForm {
-	public String team;
+	public int team;
 
-	public String number;
+	public int number;
 }

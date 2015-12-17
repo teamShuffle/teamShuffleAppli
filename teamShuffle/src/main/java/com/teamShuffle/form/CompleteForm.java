@@ -1,5 +1,7 @@
 package com.teamShuffle.form;
 
+import java.util.List;
+
 public class CompleteForm {
-	public String inputNameData;
+	public List<String> inputNameList;
 }
