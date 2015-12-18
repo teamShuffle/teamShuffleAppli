@@ -8,6 +8,7 @@
 <body>
 チーム数：${inputNameDto.team}<br>
 人数：${inputNameDto.number}<br>
+
 <div Align="center">
 <p><font size="5" color="#00ff00">名前入力画面</font></p>
 </div>

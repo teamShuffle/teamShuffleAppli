@@ -17,7 +17,6 @@ public final class header_jsp extends org.apache.jasper.runtime.HttpJspBase
   }
 
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fs_005flink_0026_005fhref;
-  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fhtml_005fimg_0026_005fwidth_005fsrc_005fheight_005fnobody;
 
   private javax.el.ExpressionFactory _el_expressionfactory;
   private org.apache.AnnotationProcessor _jsp_annotationprocessor;
@@ -28,14 +27,12 @@ public final class header_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   public void _jspInit() {
     _005fjspx_005ftagPool_005fs_005flink_0026_005fhref = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _005fjspx_005ftagPool_005fhtml_005fimg_0026_005fwidth_005fsrc_005fheight_005fnobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _el_expressionfactory = _jspxFactory.getJspApplicationContext(getServletConfig().getServletContext()).getExpressionFactory();
     _jsp_annotationprocessor = (org.apache.AnnotationProcessor) getServletConfig().getServletContext().getAttribute(org.apache.AnnotationProcessor.class.getName());
   }
 
   public void _jspDestroy() {
     _005fjspx_005ftagPool_005fs_005flink_0026_005fhref.release();
-    _005fjspx_005ftagPool_005fhtml_005fimg_0026_005fwidth_005fsrc_005fheight_005fnobody.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -70,6 +67,7 @@ public final class header_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("  \r\n");
       out.write("\r\n");
       out.write("\r\n");
+      out.write("\r\n");
       out.write("<div style=\"background-color : aqua;\">\r\n");
       out.write("\t<h1>");
       if (_jspx_meth_s_005flink_005f0(_jspx_page_context))
@@ -99,7 +97,7 @@ public final class header_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.seasar.struts.taglib.S2LinkTag _jspx_th_s_005flink_005f0 = (org.seasar.struts.taglib.S2LinkTag) _005fjspx_005ftagPool_005fs_005flink_0026_005fhref.get(org.seasar.struts.taglib.S2LinkTag.class);
     _jspx_th_s_005flink_005f0.setPageContext(_jspx_page_context);
     _jspx_th_s_005flink_005f0.setParent(null);
-    // /WEB-INF/view/common/header.jsp(2,5) name = href type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/view/common/header.jsp(3,5) name = href type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005flink_005f0.setHref("/index");
     int _jspx_eval_s_005flink_005f0 = _jspx_th_s_005flink_005f0.doStartTag();
     if (_jspx_eval_s_005flink_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -109,8 +107,7 @@ public final class header_jsp extends org.apache.jasper.runtime.HttpJspBase
         _jspx_th_s_005flink_005f0.doInitBody();
       }
       do {
-        if (_jspx_meth_html_005fimg_005f0(_jspx_th_s_005flink_005f0, _jspx_page_context))
-          return true;
+        out.write("<img src=\"img/logo.png\" />");
         int evalDoAfterBody = _jspx_th_s_005flink_005f0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;
@@ -124,29 +121,6 @@ public final class header_jsp extends org.apache.jasper.runtime.HttpJspBase
       return true;
     }
     _005fjspx_005ftagPool_005fs_005flink_0026_005fhref.reuse(_jspx_th_s_005flink_005f0);
-    return false;
-  }
-
-  private boolean _jspx_meth_html_005fimg_005f0(javax.servlet.jsp.tagext.JspTag _jspx_th_s_005flink_005f0, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  html:img
-    org.apache.struts.taglib.html.ImgTag _jspx_th_html_005fimg_005f0 = (org.apache.struts.taglib.html.ImgTag) _005fjspx_005ftagPool_005fhtml_005fimg_0026_005fwidth_005fsrc_005fheight_005fnobody.get(org.apache.struts.taglib.html.ImgTag.class);
-    _jspx_th_html_005fimg_005f0.setPageContext(_jspx_page_context);
-    _jspx_th_html_005fimg_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_s_005flink_005f0);
-    // /WEB-INF/view/common/header.jsp(2,27) name = src type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_html_005fimg_005f0.setSrc("img/logo.png");
-    // /WEB-INF/view/common/header.jsp(2,27) name = width type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_html_005fimg_005f0.setWidth("278");
-    // /WEB-INF/view/common/header.jsp(2,27) name = height type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_html_005fimg_005f0.setHeight("38");
-    int _jspx_eval_html_005fimg_005f0 = _jspx_th_html_005fimg_005f0.doStartTag();
-    if (_jspx_th_html_005fimg_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _005fjspx_005ftagPool_005fhtml_005fimg_0026_005fwidth_005fsrc_005fheight_005fnobody.reuse(_jspx_th_html_005fimg_005f0);
-      return true;
-    }
-    _005fjspx_005ftagPool_005fhtml_005fimg_0026_005fwidth_005fsrc_005fheight_005fnobody.reuse(_jspx_th_html_005fimg_005f0);
     return false;
   }
 }
