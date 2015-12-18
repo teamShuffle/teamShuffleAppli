@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 import org.seasar.struts.annotation.ActionForm;
 import org.seasar.struts.annotation.Execute;
@@ -25,9 +26,18 @@ public class IndexAction {
 	@Resource
 	public InputNameDto inputNameDto;
 
+	@Resource
+	protected HttpServletRequest request;
+
 	@Execute(validator = false)
 	public String complete() {
 		completeDto.inputNameList = completeForm.inputNameList;
+		if (isEmpty(completeDto.inputNameList)) {
+			request.setAttribute("error", "名前がからっぽですよー");
+			request.setAttribute("list", completeDto.inputNameList);
+			return "../inputName/inputName.jsp";
+		}
+
 		Collections.shuffle(completeDto.inputNameList);
 		int teamsu = inputNameDto.team;
 		setList(completeDto);
@@ -51,6 +61,15 @@ public class IndexAction {
 		completeDto.completeList.add(four);
 		completeDto.completeList.add(five);
 		return completeDto.completeList;
+	}
+
+	boolean isEmpty(List<String> inputNameList) {
+		for (String inputName : inputNameList) {
+			if (inputName.isEmpty()) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 

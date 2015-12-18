@@ -6,17 +6,22 @@
 <title>Dolteng Auto Generated</title>
 </head>
 <body>
+<div Align="center">
+<p><font size="5" color="#ff0000">${error}</font></p>
+</div>
+
 チーム数：${inputNameDto.team}<br>
 人数：${inputNameDto.number}<br>
 
 <div Align="center">
 <p><font size="5" color="#00ff00">名前入力画面</font></p>
 </div>
+
 <s:form method="POST" action="/complete/complete/">
-<c:forEach  begin="1" end="${inputNameDto.number}" step="1">
+<c:forEach  var="listNumber" begin="1" end="${inputNameDto.number}" step="1">
 <div Align="center">
 名前：
-<html:text property="inputNameList" /><br><br>
+<html:text property="inputNameList" value="${list[listNumber - 1]}" /><br><br>
 </div>
 
 </c:forEach>
