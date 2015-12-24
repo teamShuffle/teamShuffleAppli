@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 <tiles:insert page="/WEB-INF/view/common/header.jsp"  /><html>
 <html>
 <head>
@@ -7,17 +8,16 @@
 </head>
 <body>
 <div Align="center">
-<p><font size="5" color="#ff0000">${error}</font></p>
+<c:forEach var="errorMessage" items="${errorMassege}">
+<p><font size="5" color="#ff0000">${errorMessage.value}</font></p>
+</c:forEach>
 </div>
-
-チーム数：${inputNameDto.team}<br>
-人数：${inputNameDto.number}<br>
 
 <div Align="center">
 <p><font size="5" color="#00ff00">名前入力画面</font></p>
 </div>
 
-<s:form method="POST" action="/complete/complete/">
+<s:form method="POST" action="/complete/complete/" styleClass="pure-form">
 <c:forEach  var="listNumber" begin="1" end="${inputNameDto.number}" step="1">
 <div Align="center">
 名前：
@@ -25,8 +25,8 @@
 </div>
 
 </c:forEach>
-<div Align="center">
-<s:submit property="complete" value="結果発表" />
+<div Align="center" >
+<s:submit property="complete" value="結果発表" styleClass="pure-button pure-button-primary"/>
 </div>
 </s:form>
 </body>

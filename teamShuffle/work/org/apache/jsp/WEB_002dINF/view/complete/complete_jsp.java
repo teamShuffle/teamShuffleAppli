@@ -26,7 +26,7 @@ static {
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems;
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fc_005fif_0026_005ftest;
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fs_005fform_0026_005fmethod_005faction;
-  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fs_005fsubmit_0026_005fvalue_005fnobody;
+  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fs_005fsubmit_0026_005fvalue_005fstyleClass_005fnobody;
 
   private javax.el.ExpressionFactory _el_expressionfactory;
   private org.apache.AnnotationProcessor _jsp_annotationprocessor;
@@ -40,7 +40,7 @@ static {
     _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _005fjspx_005ftagPool_005fc_005fif_0026_005ftest = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _005fjspx_005ftagPool_005fs_005fform_0026_005fmethod_005faction = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _005fjspx_005ftagPool_005fs_005fsubmit_0026_005fvalue_005fnobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _005fjspx_005ftagPool_005fs_005fsubmit_0026_005fvalue_005fstyleClass_005fnobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _el_expressionfactory = _jspxFactory.getJspApplicationContext(getServletConfig().getServletContext()).getExpressionFactory();
     _jsp_annotationprocessor = (org.apache.AnnotationProcessor) getServletConfig().getServletContext().getAttribute(org.apache.AnnotationProcessor.class.getName());
   }
@@ -50,7 +50,7 @@ static {
     _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems.release();
     _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.release();
     _005fjspx_005ftagPool_005fs_005fform_0026_005fmethod_005faction.release();
-    _005fjspx_005ftagPool_005fs_005fsubmit_0026_005fvalue_005fnobody.release();
+    _005fjspx_005ftagPool_005fs_005fsubmit_0026_005fvalue_005fstyleClass_005fnobody.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -88,18 +88,14 @@ static {
       if (_jspx_meth_tiles_005finsert_005f0(_jspx_page_context))
         return;
       out.write("<html>\r\n");
+      out.write("<link rel=\"stylesheet\" href=\"http://yui.yahooapis.com/pure/0.6.0/pure-min.css\">\r\n");
       out.write("<html>\r\n");
       out.write("<head>\r\n");
       out.write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n");
       out.write("<title>Dolteng Auto Generated</title>\r\n");
       out.write("</head>\r\n");
       out.write("<body>\r\n");
-      out.write("チーム数：");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${inputNameDto.team}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("<br><br>\r\n");
-      out.write("全体の人数：");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${inputNameDto.number}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("<br><br>\r\n");
+      out.write("\r\n");
       out.write("<div Align=\"center\">\r\n");
       out.write("<p><font size=\"5\" color=\"#00ff00\">結果発表</font></p>\r\n");
       out.write("\r\n");
@@ -190,9 +186,15 @@ static {
       if (_jspx_eval_c_005fforEach_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\r\n");
-          out.write("名前：");
+          out.write("<table border=\"1\" class=\"pure-table\">\r\n");
+          out.write("<tr>\r\n");
+          out.write("<td bgcolor=\"#00ff00\">名前</td>\r\n");
+          out.write("<td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${inputNameList}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("<br><br>\r\n");
+          out.write("</td>\r\n");
+          out.write("</tr>\r\n");
+          out.write("</table>\r\n");
+          out.write("\r\n");
           int evalDoAfterBody = _jspx_th_c_005fforEach_005f0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -220,11 +222,11 @@ static {
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f1 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f1.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f1.setParent(null);
-    // /WEB-INF/view/complete/complete.jsp(20,0) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/view/complete/complete.jsp(26,0) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f1.setVar("inputNameList");
-    // /WEB-INF/view/complete/complete.jsp(20,0) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/view/complete/complete.jsp(26,0) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f1.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${completeDto.completeList[1]}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/view/complete/complete.jsp(20,0) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/view/complete/complete.jsp(26,0) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f1.setVarStatus("status");
     int[] _jspx_push_body_count_c_005fforEach_005f1 = new int[] { 0 };
     try {
@@ -262,7 +264,7 @@ static {
     org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_005fif_005f0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
     _jspx_th_c_005fif_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fif_005f0.setParent(null);
-    // /WEB-INF/view/complete/complete.jsp(25,0) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/view/complete/complete.jsp(31,0) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fif_005f0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${fn:length(completeDto.completeList[2]) > 0}", java.lang.Boolean.class, (PageContext)_jspx_page_context, _jspx_fnmap_0, false)).booleanValue());
     int _jspx_eval_c_005fif_005f0 = _jspx_th_c_005fif_005f0.doStartTag();
     if (_jspx_eval_c_005fif_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -296,11 +298,11 @@ static {
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f2 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f2.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fif_005f0);
-    // /WEB-INF/view/complete/complete.jsp(27,0) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/view/complete/complete.jsp(33,0) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f2.setVar("inputNameList");
-    // /WEB-INF/view/complete/complete.jsp(27,0) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/view/complete/complete.jsp(33,0) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f2.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${completeDto.completeList[2]}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/view/complete/complete.jsp(27,0) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/view/complete/complete.jsp(33,0) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f2.setVarStatus("status");
     int[] _jspx_push_body_count_c_005fforEach_005f2 = new int[] { 0 };
     try {
@@ -338,7 +340,7 @@ static {
     org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_005fif_005f1 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
     _jspx_th_c_005fif_005f1.setPageContext(_jspx_page_context);
     _jspx_th_c_005fif_005f1.setParent(null);
-    // /WEB-INF/view/complete/complete.jsp(33,0) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/view/complete/complete.jsp(39,0) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fif_005f1.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${fn:length(completeDto.completeList[3]) > 0}", java.lang.Boolean.class, (PageContext)_jspx_page_context, _jspx_fnmap_0, false)).booleanValue());
     int _jspx_eval_c_005fif_005f1 = _jspx_th_c_005fif_005f1.doStartTag();
     if (_jspx_eval_c_005fif_005f1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -372,11 +374,11 @@ static {
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f3 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f3.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fif_005f1);
-    // /WEB-INF/view/complete/complete.jsp(35,0) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/view/complete/complete.jsp(41,0) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f3.setVar("inputNameList");
-    // /WEB-INF/view/complete/complete.jsp(35,0) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/view/complete/complete.jsp(41,0) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f3.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${completeDto.completeList[3]}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/view/complete/complete.jsp(35,0) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/view/complete/complete.jsp(41,0) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f3.setVarStatus("status");
     int[] _jspx_push_body_count_c_005fforEach_005f3 = new int[] { 0 };
     try {
@@ -414,7 +416,7 @@ static {
     org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_005fif_005f2 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
     _jspx_th_c_005fif_005f2.setPageContext(_jspx_page_context);
     _jspx_th_c_005fif_005f2.setParent(null);
-    // /WEB-INF/view/complete/complete.jsp(41,0) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/view/complete/complete.jsp(47,0) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fif_005f2.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${fn:length(completeDto.completeList[4]) > 0}", java.lang.Boolean.class, (PageContext)_jspx_page_context, _jspx_fnmap_0, false)).booleanValue());
     int _jspx_eval_c_005fif_005f2 = _jspx_th_c_005fif_005f2.doStartTag();
     if (_jspx_eval_c_005fif_005f2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -448,11 +450,11 @@ static {
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f4 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f4.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f4.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fif_005f2);
-    // /WEB-INF/view/complete/complete.jsp(43,0) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/view/complete/complete.jsp(49,0) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f4.setVar("inputNameList");
-    // /WEB-INF/view/complete/complete.jsp(43,0) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/view/complete/complete.jsp(49,0) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f4.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${completeDto.completeList[4]}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/view/complete/complete.jsp(43,0) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/view/complete/complete.jsp(49,0) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f4.setVarStatus("status");
     int[] _jspx_push_body_count_c_005fforEach_005f4 = new int[] { 0 };
     try {
@@ -490,9 +492,9 @@ static {
     org.seasar.struts.taglib.S2FormTag _jspx_th_s_005fform_005f0 = (org.seasar.struts.taglib.S2FormTag) _005fjspx_005ftagPool_005fs_005fform_0026_005fmethod_005faction.get(org.seasar.struts.taglib.S2FormTag.class);
     _jspx_th_s_005fform_005f0.setPageContext(_jspx_page_context);
     _jspx_th_s_005fform_005f0.setParent(null);
-    // /WEB-INF/view/complete/complete.jsp(50,0) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/view/complete/complete.jsp(56,0) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fform_005f0.setMethod("POST");
-    // /WEB-INF/view/complete/complete.jsp(50,0) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/view/complete/complete.jsp(56,0) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fform_005f0.setAction("/index");
     int _jspx_eval_s_005fform_005f0 = _jspx_th_s_005fform_005f0.doStartTag();
     if (_jspx_eval_s_005fform_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -522,17 +524,19 @@ static {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  s:submit
-    org.seasar.struts.taglib.S2SubmitTag _jspx_th_s_005fsubmit_005f0 = (org.seasar.struts.taglib.S2SubmitTag) _005fjspx_005ftagPool_005fs_005fsubmit_0026_005fvalue_005fnobody.get(org.seasar.struts.taglib.S2SubmitTag.class);
+    org.seasar.struts.taglib.S2SubmitTag _jspx_th_s_005fsubmit_005f0 = (org.seasar.struts.taglib.S2SubmitTag) _005fjspx_005ftagPool_005fs_005fsubmit_0026_005fvalue_005fstyleClass_005fnobody.get(org.seasar.struts.taglib.S2SubmitTag.class);
     _jspx_th_s_005fsubmit_005f0.setPageContext(_jspx_page_context);
     _jspx_th_s_005fsubmit_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_s_005fform_005f0);
-    // /WEB-INF/view/complete/complete.jsp(53,0) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/view/complete/complete.jsp(59,0) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fsubmit_005f0.setValue("トップへ戻る");
+    // /WEB-INF/view/complete/complete.jsp(59,0) name = styleClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_s_005fsubmit_005f0.setStyleClass("pure-button pure-button-primary");
     int _jspx_eval_s_005fsubmit_005f0 = _jspx_th_s_005fsubmit_005f0.doStartTag();
     if (_jspx_th_s_005fsubmit_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _005fjspx_005ftagPool_005fs_005fsubmit_0026_005fvalue_005fnobody.reuse(_jspx_th_s_005fsubmit_005f0);
+      _005fjspx_005ftagPool_005fs_005fsubmit_0026_005fvalue_005fstyleClass_005fnobody.reuse(_jspx_th_s_005fsubmit_005f0);
       return true;
     }
-    _005fjspx_005ftagPool_005fs_005fsubmit_0026_005fvalue_005fnobody.reuse(_jspx_th_s_005fsubmit_005f0);
+    _005fjspx_005ftagPool_005fs_005fsubmit_0026_005fvalue_005fstyleClass_005fnobody.reuse(_jspx_th_s_005fsubmit_005f0);
     return false;
   }
 }
