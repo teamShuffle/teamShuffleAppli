@@ -20,7 +20,7 @@
 <s:form method="POST" action="/complete/complete/" styleClass="pure-form">
 <c:forEach  var="listNumber" begin="1" end="${inputNameDto.number}" step="1">
 <div Align="center">
-名前：
+<b>名前：</b>
 <html:text property="inputNameList" value="${list[listNumber - 1]}" /><br><br>
 </div>
 

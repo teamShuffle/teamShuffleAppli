@@ -243,7 +243,7 @@ public final class inputName_jsp extends org.apache.jasper.runtime.HttpJspBase
         do {
           out.write("\r\n");
           out.write("<div Align=\"center\">\r\n");
-          out.write("名前：\r\n");
+          out.write("<b>名前：</b>\r\n");
           if (_jspx_meth_html_005ftext_005f0(_jspx_th_c_005fforEach_005f1, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f1))
             return true;
           out.write("<br><br>\r\n");
