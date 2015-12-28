@@ -15,21 +15,11 @@ public class InputNameValidator {
 			errorMessageMap.put("error", "名前が未記入のところがありますよー");
 		}
 
-		if (overLapNameCheck(inputNameList) && !isEmptyList(inputNameList)) {
+		if (overLapNameCheck(inputNameList)) {
 			errorMessageMap.put("overlap", "名前が重複してますよー。同じ名前は入力しないでー");
 		}
 		return errorMessageMap;
 	}
-
-	// Listの中身が空の場合、trueを返す。
-		boolean isEmptyList(List<String> inputNameList) {
-			for (String inputName : inputNameList) {
-				if (!inputName.isEmpty()) {
-					return false;
-				}
-			}
-			return true;
-		}
 
 	// 全ての名前が記入されていなければtrueを返す。
 	private boolean isEmpty(List<String> inputNameList) {
@@ -47,7 +37,9 @@ public class InputNameValidator {
 		Set<String> nameSet = new HashSet<>();
 		for (String inputName : inputNameList) {
 			if (nameSet.contains(inputName)) {
-				return true;
+				if (!inputName.equals("")) {
+					return true;
+				}
 			} else {
 				nameSet.add(inputName);
 			}
