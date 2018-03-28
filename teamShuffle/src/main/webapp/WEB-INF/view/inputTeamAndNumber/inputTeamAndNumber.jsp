@@ -10,11 +10,12 @@
 <p><font size="5" color="#ff0000">${error}</font></p>
 </div>
 
-
+<div style="text-align:center;">
 チーム数・人数入力画面<br><br>
+</div>
 <s:form method="POST" action="/inputName/inputName/">
 
-
+<div style="text-align:center;">
 チーム数：
 <html:select property="team"  >
     <c:forEach var="teamList" items="${teamList}">
@@ -33,6 +34,7 @@
 
 
 <s:submit property="inputName" value="名前入力画面へ" />
+</div>
 </s:form>
 </body>
 </html>

@@ -6,9 +6,9 @@
 </head>
 <body>
 <s:form method="POST" action="/inputTeamAndNumber/inputTeamAndNumber/">
-
+<div style="text-align:center;">
 <s:submit property="inputTeamAndNumber" value="ゲームスタート" />
-
+</div>
 </s:form>
 </body>
 </html>
